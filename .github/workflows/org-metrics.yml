@@ -1,0 +1,35 @@
+name: Organization Metrics
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/org-metrics.yml"
+      - "profile/README.md"
+
+permissions:
+  contents: write
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: NextSimTech
+          filename: profile/metrics.svg
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: UTC
+
+      - name: Commit and push generated metrics
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update organization metrics"
+          file_pattern: "profile/metrics.svg"

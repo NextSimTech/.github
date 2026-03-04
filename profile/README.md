@@ -1,12 +1,17 @@
-## Hi there 👋
+![NextSimTech Banner](https://capsule-render.vercel.app/api?type=waving&height=180&color=0:0f172a,100:2563eb&text=NextSimTech&fontColor=ffffff&fontSize=52&fontAlignY=35&desc=Organization%20Engineering%20Metrics&descAlignY=57)
 
-<!--
+## Organization Dashboard
 
-**Here are some ideas to get you started:**
+![Metrics Workflow](https://github.com/NextSimTech/.github/actions/workflows/org-metrics.yml/badge.svg)
+![Public Repositories](https://img.shields.io/github/orgs/NextSimTech/repositories?style=for-the-badge&label=Public%20Repos)
+![Followers](https://img.shields.io/github/followers/NextSimTech?style=for-the-badge&label=Followers)
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+### GitHub Workflow Metric
+
+- Workflow: `Organization Metrics`
+- Schedule: Every Monday at 04:00 UTC
+- Output: `profile/metrics.svg`
+
+### Organization Metrics Snapshot
+
+![Organization Metrics](./metrics.svg)
